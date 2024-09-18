@@ -11,6 +11,7 @@
     
     <div id="intro-loading-screen">
         <div class="intro-loader"></div>
+        <h2 class="welcome-message">Noah Harris Portfolio</h2>
     </div>
 
     <div class="sidebar">
@@ -28,6 +29,7 @@
                 <p>Feel free to connect with me:</p>
                 <p><a href="mailto:garrisondev32@gmail.com"><i class="fas fa-envelope"></i> Email Me</a> | <a href="https://github.com/TheGarrison11" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
             </div>
+
         </section>
 
         <section id="projects">
@@ -53,6 +55,8 @@
                 <p>Description for Test 3</p>
                 <a href="https://example.com" target="_blank">View Project</a>
             </div>
+            
+
 
 
 
@@ -64,16 +68,17 @@
     </footer>
 
     <script>
-        window.addEventListener('load', function() {
-            const introLoadingScreen = document.getElementById('intro-loading-screen');
-            setTimeout(() => {
-                introLoadingScreen.style.opacity = '0';
-                setTimeout(() => {
-                    introLoadingScreen.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }, 500);
-            }, 500);
-        });
+window.addEventListener('load', function() {
+    const introLoadingScreen = document.getElementById('intro-loading-screen');
+    introLoadingScreen.classList.add('show-message');
+    setTimeout(() => {
+        introLoadingScreen.style.opacity = '0';
+        setTimeout(() => {
+            introLoadingScreen.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 500);
+    }, 2000);
+});
     </script>
 </body>
 </html>
