@@ -14,6 +14,12 @@
         <h2 class="welcome-message">Noah Harris Portfolio</h2>
     </div>
 
+    <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
     <div class="sidebar">
         <a href="#about" title="About Me"><i class="fas fa-user"></i></a>
         <a href="#projects" title="Projects"><i class="fas fa-briefcase"></i></a>
@@ -29,37 +35,28 @@
                 <p>Feel free to connect with me:</p>
                 <p><a href="mailto:garrisondev32@gmail.com"><i class="fas fa-envelope"></i> Email Me</a> | <a href="https://github.com/TheGarrison11" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
             </div>
-
         </section>
 
         <section id="projects">
             <h1>My Projects</h1>
-            
             <div class="project">
                 <img src="profile.jpeg" alt="Project 1">
                 <h2>Soon</h2>
                 <p>Soon.</p>
                 <a href="https://example.com" target="_blank">View Project</a>
             </div>
-
             <div class="project">
                 <img src="profile.jpeg" alt="Project 2">
                 <h2>Test</h2>
                 <p>Test</p>
                 <a href="https://example.com" target="_blank">View Project</a>
             </div>
-
             <div class="project">
                 <img src="profile.jpeg" alt="Project 3">
                 <h2>Test 3</h2>
                 <p>Description for Test 3</p>
                 <a href="https://example.com" target="_blank">View Project</a>
             </div>
-            
-
-
-
-
         </section>
     </div>
 
@@ -68,17 +65,22 @@
     </footer>
 
     <script>
-window.addEventListener('load', function() {
-    const introLoadingScreen = document.getElementById('intro-loading-screen');
-    introLoadingScreen.classList.add('show-message');
-    setTimeout(() => {
-        introLoadingScreen.style.opacity = '0';
-        setTimeout(() => {
-            introLoadingScreen.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }, 500);
-    }, 2000);
-});
+        window.addEventListener('load', function() {
+            const introLoadingScreen = document.getElementById('intro-loading-screen');
+            introLoadingScreen.classList.add('show-message');
+            setTimeout(() => {
+                introLoadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    introLoadingScreen.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }, 2000);
+        });
+
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
