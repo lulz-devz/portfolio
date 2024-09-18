@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background: linear-gradient(to right, #f5f5f5, #e0e0e0);
-    overflow: hidden; /* Hide scrollbars during loading */
+    overflow: hidden;
 }
 
 .sidebar {
@@ -191,6 +191,23 @@ footer {
     width: 60px;
     height: 60px;
     animation: spin 1s linear infinite;
+}
+
+.welcome-message {
+    font-size: 24px;
+    color: #333;
+    position: absolute;
+    top: 65%;
+    text-align: center;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    opacity: 0; /* Hide initially */
+    transition: opacity 0.5s ease-in-out;
+}
+
+#intro-loading-screen.show-message .welcome-message
+{
+    opacity: 1;
 }
 
 @keyframes spin {
