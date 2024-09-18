@@ -72,6 +72,16 @@
             sidebar.classList.toggle('active');
         });
 
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            sidebar.classList.remove('active');
+        });
+
         window.addEventListener('load', function() {
             const introLoadingScreen = document.getElementById('intro-loading-screen');
             introLoadingScreen.classList.add('show-message');
