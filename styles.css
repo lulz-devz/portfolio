@@ -212,7 +212,7 @@ footer {
     100% { transform: rotate(360deg); }
 }
 
-
+/* Hamburger Menu Styles */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -233,38 +233,21 @@ footer {
     border-radius: 5px;
 }
 
-/* Show hamburger icon on mobile */
+
 @media (max-width: 768px) {
     .sidebar {
-        width: 50px;
-        font-size: 20px;
-    }
-
-    .content {
-        margin-left: 0;
-    }
-
-    #about h1, #projects h1 {
-        font-size: 2em;
-    }
-
-    .project h2 {
-        font-size: 1.5em;
-    }
-
-    .project p {
-        font-size: 1em;
+        display: none; 
     }
 
     .hamburger {
-        display: flex;
-    }
-
-    .sidebar {
-        display: none;
+        display: flex; 
     }
 
     .sidebar.active {
-        display: flex;
+        display: flex; 
+    }
+
+    .content {
+        margin-left: 0; 
     }
 }
