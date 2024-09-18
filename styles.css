@@ -81,6 +81,7 @@ body {
     padding: 20px;
     flex: 1;
     background: #ecf0f1;
+    transition: margin-left 0.3s ease; /* Smooth transition */
 }
 
 section {
@@ -233,7 +234,7 @@ footer {
     border-radius: 5px;
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
     .sidebar {
         display: none; 
