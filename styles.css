@@ -18,7 +18,7 @@ body {
     background: #333;
     width: 70px;
     height: 100vh;
-    position: fixed;
+    position: fixed; /* This ensures the sidebar stays fixed on the left side */
     top: 0;
     left: 0;
     display: flex;
@@ -28,8 +28,18 @@ body {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 0 10px 10px 0;
     transition: width 0.3s ease;
+    z-index: 1000; /* Ensure the sidebar is in front of the content */
 }
 
+.content {
+    margin-left: 90px;
+    padding: 20px;
+    flex: 1;
+    background: #ecf0f1;
+    transition: margin-left 0.3s ease;
+    position: relative;
+    z-index: 1; /* Make sure the content is behind the sidebar */
+}
 .sidebar:hover {
     width: 200px;
 }
@@ -74,14 +84,6 @@ body {
 .sidebar a:hover {
     color: #3498db;
     transform: scale(1.2);
-}
-
-.content {
-    margin-left: 90px;
-    padding: 20px;
-    flex: 1;
-    background: #ecf0f1;
-    transition: margin-left 0.3s ease; /* Smooth transition */
 }
 
 section {
