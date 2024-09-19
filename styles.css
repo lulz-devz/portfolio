@@ -213,15 +213,18 @@ footer {
     100% { transform: rotate(360deg); }
 }
 
-/* Hamburger Menu Styles */
+#about {
+    position: relative;
+}
+
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 25px;
     position: absolute;
-    top: 150px;
+    top: 20px;
     right: 20px;
     cursor: pointer;
     z-index: 1000;
