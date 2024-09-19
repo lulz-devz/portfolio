@@ -72,8 +72,20 @@
             sidebar.classList.toggle('active');
         });
 
-        window.addEventListener('scroll', () => {
-            sidebar.classList.remove('active');
+        const sidebarLinks = document.querySelectorAll('.sidebar a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+
+
+                setTimeout(() => {
+                    sidebar.classList.remove('active');
+                }, 500);
+            });
         });
 
         window.addEventListener('load', function() {
