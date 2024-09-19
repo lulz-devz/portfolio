@@ -213,6 +213,19 @@ footer {
     100% { transform: rotate(360deg); }
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
 
 .line {
     height: 3px;
@@ -221,6 +234,7 @@ footer {
     border-radius: 5px;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .sidebar {
         display: none; 
