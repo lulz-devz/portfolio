@@ -31,16 +31,6 @@ body {
     z-index: 9999;
 }
 
-.sidebar.active {
-    width: 200px;
-}
-
-.sidebar.active a::before {
-    opacity: 1;
-    left: 100%;
-    transform: translateX(-10px);
-}
-
 .sidebar:hover {
     width: 200px;
 }
@@ -172,7 +162,6 @@ section:hover {
     color: #666;
 }
 
-
 footer {
     background: #333;
     color: #fff;
@@ -182,7 +171,6 @@ footer {
     width: 100%;
     bottom: 0;
 }
-
 
 #intro-loading-screen {
     position: fixed;
@@ -215,7 +203,7 @@ footer {
     text-align: center;
     width: 100%;
     font-family: Arial, sans-serif;
-    opacity: 0; /* Hide initially */
+    opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -228,7 +216,6 @@ footer {
     100% { transform: rotate(360deg); }
 }
 
-
 .hamburger {
     display: none;
     flex-direction: column;
@@ -236,7 +223,7 @@ footer {
     width: 30px;
     height: 25px;
     position: absolute;
-    top: 120px; 
+    top: 120px;
     right: 20px;
     cursor: pointer;
     z-index: 1000;
