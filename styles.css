@@ -11,14 +11,14 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background: linear-gradient(to right, #f5f5f5, #e0e0e0);
-    overflow-x: hidden;
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
 }
 
 .sidebar {
     background: #333;
     width: 70px;
     height: 100vh;
-    position: fixed;
+    position: fixed; /* Ensures the sidebar stays in place */
     top: 0;
     left: 0;
     display: flex;
@@ -28,7 +28,7 @@ body {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 0 10px 10px 0;
     transition: width 0.3s ease;
-    z-index: 1000;
+    z-index: 9999; /* Increased z-index to ensure it stays on top */
 }
 
 .sidebar:hover {
@@ -82,9 +82,9 @@ body {
     padding: 20px;
     flex: 1;
     background: #ecf0f1;
-    transition: margin-left 0.3s ease;
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Ensures content stays below the sidebar */
+    transition: margin-left 0.3s ease; /* Smooth transition */
 }
 
 section {
@@ -94,6 +94,8 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     max-width: 900px;
+    position: relative;
+    z-index: 1; /* Each section is below the sidebar */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -160,6 +162,7 @@ section:hover {
     color: #666;
 }
 
+/* Footer Styles */
 footer {
     background: #333;
     color: #fff;
@@ -170,6 +173,7 @@ footer {
     bottom: 0;
 }
 
+/* Loading Screen Styles */
 #intro-loading-screen {
     position: fixed;
     top: 0;
@@ -201,7 +205,7 @@ footer {
     text-align: center;
     width: 100%;
     font-family: Arial, sans-serif;
-    opacity: 0;
+    opacity: 0; /* Hide initially */
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -214,6 +218,7 @@ footer {
     100% { transform: rotate(360deg); }
 }
 
+/* Hamburger Menu Styles */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -221,7 +226,7 @@ footer {
     width: 30px;
     height: 25px;
     position: absolute;
-    top: 120px;
+    top: 120px; /* Adjusted to move down */
     right: 20px;
     cursor: pointer;
     z-index: 1000;
@@ -234,6 +239,7 @@ footer {
     border-radius: 5px;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .sidebar {
         display: none; 
@@ -245,6 +251,7 @@ footer {
 
     .sidebar.active {
         display: flex; 
+        z-index: 9999;
     }
 
     .content {
