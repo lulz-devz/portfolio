@@ -116,10 +116,10 @@ section:hover {
     color: #555;
 }
 
-.profile-img, .project img {
-    border-radius: 0;
-    width: 150px;   
-    height: 150px;    
+.project img {
+    border-radius: 0 !important;
+    width: 150px !important; 
+    height: 150px !important; 
     margin-bottom: 20px;
     border: 5px solid #3498db;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
