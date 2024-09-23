@@ -117,9 +117,9 @@ section:hover {
 }
 
 .profile-img, .project img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    border-radius: 0;
+    width: 150px;   
+    height: 150px;    
     margin-bottom: 20px;
     border: 5px solid #3498db;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
